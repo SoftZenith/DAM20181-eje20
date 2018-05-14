@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Alumno</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list >
+    <form [formGroup] = "formgroup">
+      <ion-item>
+        <ion-label floating>Nombre</ion-label>
+        <ion-input type="text" formControlName="name"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="!formgroup.controls.name.valid">
+        Field required
+      </ion-item>
+      <ion-item>
+          <ion-label floating>Primer apellido</ion-label>
+          <ion-input type="text" formControlName="lastname"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="!formgroup.controls.lastname.valid">
+          Field required
+        </ion-item>
+      <ion-item>
+          <ion-label floating>Segundo apellido</ion-label>
+          <ion-input type="text" formControlName="lastname"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="!formgroup.controls.lastname.valid">
+          Field required
+        </ion-item>
+      <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input type="text" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="!formgroup.controls.email.valid">
+          Field required
+        </ion-item>
+      <ion-item>
+          <ion-label floating>Fecha nacimiento</ion-label>
+          <ion-input type="text" formControlName="date"></ion-input>
+      </ion-item>
+      <ion-item *ngIf="!formgroup.controls.date.valid">
+          Field required
+        </ion-item>
+    </form>
+  </ion-list>
+  <br/>
+  <div>
+    <button ion-button primary block (click)="saveStudent()">Guardar</button>
+  </div>
+</ion-content>

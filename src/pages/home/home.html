@@ -1,14 +1,32 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Login
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+      <ion-list>
+        <form [formGroup]="formgroup">
+        <ion-item>
+          <ion-label floating>Username</ion-label>
+          <ion-input [(ngModel)]="username" formControlName="username"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!formgroup.controls.username.valid">
+          <p>Field required min 6 characters</p>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Password</ion-label>
+          <ion-input type="password" [(ngModel)]="password" formControlName="password"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="!formgroup.controls.password.valid">
+          <p>Fiel required min 8 characters</p>
+        </ion-item>
+        </form>
+      </ion-list>
+      <br/>
+      <div>
+        <button ion-button primary block (click)="login()" [disabled]="!formgroup.controls.username.valid && !formgroup.controls.password.valid">Ingresar</button>
+      </div>
 </ion-content>

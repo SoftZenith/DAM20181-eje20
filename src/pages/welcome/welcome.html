@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Bienvenido</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <div>
+      <h2>
+        Bienvenido
+      </h2>
+      <p>{{currentUser.name}}</p>
+    </div>
+    <br/>
+    <button ion-button primary block (click)="newStudent()">Capturar alumnos</button>
+    <button ion-button primary block (click)="setScore()">Capturar calificaciones</button>
+
+</ion-content>

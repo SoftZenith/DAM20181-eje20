@@ -1,0 +1,17 @@
+[
+    {
+        "user": "iarjona",
+        "pass": "12345678",
+        "name": "Israel Arjona"
+    },
+    {
+        "user": "bryang",
+        "pass": "12345678",
+        "name": "Bryan Gutierrez"
+    },
+    {
+        "user": "admin",
+        "pass": "admin",
+        "name": "administrador"
+    }
+]

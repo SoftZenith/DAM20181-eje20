@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Capturar calificaciones</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list >
+    <ion-item *ngFor="let student of students">
+      <ion-label floating>{{student.name}} {{student.lastname}}</ion-label>
+      <ion-input type="number"></ion-input>
+    </ion-item>
+  </ion-list>
+  <div>
+    <button ion-button primary block (click)="saveScores()">Guardar</button>
+  </div>
+</ion-content>
